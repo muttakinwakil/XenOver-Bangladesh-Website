@@ -84,24 +84,26 @@ export default function Hero() {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="relative flex items-center justify-center"
           >
-            <div className="relative w-full max-w-lg mx-auto">
+            <div className="relative w-full max-w-lg mx-auto flex items-center justify-center">
               {!imageError ? (
-                <img 
-                  src="/hero-image.png" 
-                  alt="Technology and Innovation" 
-                  className="w-full h-auto object-contain rounded-2xl neon-border shadow-2xl shadow-indigo-500/20"
-                  onError={() => setImageError(true)}
-                />
+                <div className="relative w-full max-w-md aspect-square">
+                  <img 
+                    src="/mo.jpg" 
+                    alt="Technology and Innovation" 
+                    className="w-full h-full object-cover rounded-full neon-border shadow-2xl shadow-indigo-500/20"
+                    onError={() => setImageError(true)}
+                  />
+                  {/* Glowing effect around circular image */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 via-purple-500/20 to-pink-500/20 rounded-full blur-xl -z-10" />
+                </div>
               ) : (
-                <div className="w-full h-[400px] rounded-2xl neon-border shadow-2xl shadow-indigo-500/20 bg-gradient-to-br from-indigo-900/30 via-purple-900/30 to-pink-900/30 flex items-center justify-center border border-indigo-500/30">
+                <div className="w-full max-w-md aspect-square rounded-full neon-border shadow-2xl shadow-indigo-500/20 bg-gradient-to-br from-indigo-900/30 via-purple-900/30 to-pink-900/30 flex items-center justify-center border border-indigo-500/30">
                   <div className="text-center p-6">
                     <div className="text-4xl mb-3">🌐</div>
-                    <p className="text-white/60 text-sm">Add hero-image.png to public folder</p>
+                    <p className="text-white/60 text-sm">Add image to public folder</p>
                   </div>
                 </div>
               )}
-              {/* Glowing effect around image */}
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl blur-xl -z-10" />
             </div>
           </motion.div>
         </div>
