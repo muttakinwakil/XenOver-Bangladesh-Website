@@ -3,40 +3,40 @@ import { useState } from 'react'
 
 const projects = [
   {
-    title: 'Project 1',
-    desc: 'High-impact solution delivering measurable outcomes for clients.',
+    title: 'HR-Xen',
+    desc: 'HR Xen is an intelligent HR management software that automates recruitment, attendance, payroll, and performance tracking. It offers cloud-based access, real-time analytics, and employee self-service features. Designed for efficiency, security, and scalability, HR Xen simplifies workforce management and enhances productivity for organizations of any size.',
     gradient: 'from-indigo-500 via-purple-500 to-pink-500',
-    image: 'https://picsum.photos/800/600?random=20',
+    image: '../../public/hrxen.png',
   },
   {
-    title: 'Project 2',
-    desc: 'Innovative approach solving complex challenges with cutting-edge technology.',
+    title: 'Advance Industrial Resource Management System',
+    desc: 'AIRMS is a next-generation software solution that optimizes production, workforce, inventory, and machinery across industrial operations. With real-time monitoring, predictive analytics, and automation, AIRMS enhances efficiency, reduces waste, and ensures seamless coordination between departments for smarter, data-driven industrial management.',
     gradient: 'from-blue-500 via-cyan-500 to-teal-500',
-    image: 'https://picsum.photos/800/600?random=21',
+    image: '../../public/rmg.jpg',
   },
   {
-    title: 'Project 3',
-    desc: 'Strategic implementation driving business growth and operational efficiency.',
+    title: 'GoSafe Bangladesh',
+    desc: 'GoSafe Bangladesh is a nationwide intelligent transport safety and monitoring system designed to ensure road safety, transparency, and accountability. It integrates smart surveillance, vehicle tracking, and digital verification through QR and ANPR technology, empowering passengers, drivers, and authorities with real-time data for a safer, smarter Bangladesh.',
     gradient: 'from-orange-500 via-pink-500 to-rose-500',
-    image: 'https://picsum.photos/800/600?random=22',
+    image: '../../public/Gosafe.jpg',
   },
   {
-    title: 'Project 4',
-    desc: 'Transformative solution enhancing user experience and engagement.',
+    title: 'Ibadat',
+    desc: 'Ibadat App is an advanced Islamic lifestyle platform integrating AI-powered prayer reminders, personalized Quran learning, Tasbeeh tracking, and virtual Qibla compass with AR. It offers live Islamic lectures, community discussions, Ramadan fasting analytics, charity tracking, and multilingual support — empowering Muslims with a complete digital worship experience.',
     gradient: 'from-emerald-500 via-teal-500 to-cyan-500',
-    image: 'https://picsum.photos/800/600?random=23',
+    image: '../../public/ibadat1.png',
   },
   {
-    title: 'Project 5',
-    desc: 'Comprehensive platform enabling seamless collaboration and productivity.',
+    title: 'Store-Xen',
+    desc: 'Store Xen is a smart inventory and retail management system designed to streamline product tracking, sales, and supply operations. It offers real-time stock monitoring, barcode integration, purchase and sales automation, expense tracking, and analytics dashboards — empowering businesses to manage multi-branch stores efficiently with accuracy and data-driven insights.',
     gradient: 'from-violet-500 via-purple-500 to-fuchsia-500',
-    image: 'https://picsum.photos/800/600?random=24',
+    image: '../../public/store.png',
   },
   {
-    title: 'Project 6',
-    desc: 'Advanced system delivering real-time insights and data-driven decisions.',
+    title: 'Xen Cloud',
+    desc: 'Xen Cloud is an advanced cloud infrastructure platform powered by Amazon Web Services (AWS). It provides secure data storage, scalable computing, and AI-driven performance optimization. With AWS reliability, 99.99% uptime, and seamless enterprise integration, Xen Cloud empowers businesses to deploy, manage, and scale applications with global-grade efficiency and security.',
     gradient: 'from-rose-500 via-pink-500 to-orange-500',
-    image: 'https://picsum.photos/800/600?random=25',
+    image: '../../public/Cloud1.png',
   },
 ]
 

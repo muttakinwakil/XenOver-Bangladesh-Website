@@ -12,16 +12,16 @@ export default function Footer() {
           </div>
           <div className="text-sm text-slate-300">
             <p className="font-medium text-white mb-1">Contact</p>
-            <p>Address: Dhaka, Bangladesh</p>
-            <p>Email: contact@xenover-bd.com</p>
-            <p>Phone: +880 1XXX-XXXXXX</p>
+            <p>Address: Uttara, Dhaka, Bangladesh</p>
+            <p>Email: contact@xenoverbangladesh.com</p>
+            <p>Phone: +880 1626-949506</p>
           </div>
           <div className="text-sm text-slate-300">
             <div className="mb-2 font-medium text-white">Follow</div>
             <div className="flex gap-4">
-              <a href="#" className="transition-colors hover:text-indigo-300 hover:underline">Facebook</a>
-              <a href="#" className="transition-colors hover:text-indigo-300 hover:underline">LinkedIn</a>
-              <a href="#" className="transition-colors hover:text-indigo-300 hover:underline">YouTube</a>
+              <a href="https://www.facebook.com/profile.php?id=61576825140649" className="transition-colors hover:text-indigo-300 hover:underline">Facebook</a>
+              <a href="https://www.linkedin.com/company/xenover-bangladesh/posts?lipi=urn%3Ali%3Apage%3Aorganization_admin_admin_page_posts_published%3B5c1b05f8-8b65-4721-8f87-468ee72fea37" className="transition-colors hover:text-indigo-300 hover:underline">LinkedIn</a>
+              <a href="https://youtube.com/@theopeninsight?si=aXyEFrLBQj9WGIHo" className="transition-colors hover:text-indigo-300 hover:underline">YouTube</a>
             </div>
           </div>
         </div>

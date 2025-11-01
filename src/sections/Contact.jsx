@@ -72,10 +72,11 @@ export default function Contact() {
               className="h-[300px] w-full sm:h-full sm:min-h-[500px]"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.903186010022!2d90.3994521760688!3d23.750867438726274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b0e3b9b0a7%3A0x9d0a8a3a8a0d6c7!2sDhaka!5e0!3m2!1sen!2sbd!4v1700000000000"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20639.649148698172!2d90.3987872285059!3d23.86801538996247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c5d05e7074dd%3A0xd1c58803049f00c7!2sUttara%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1761974990148!5m2!1sen!2sbd"
               allowFullScreen
             />
           </motion.div>
+          
         </div>
       </div>
     </section>

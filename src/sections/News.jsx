@@ -1,16 +1,72 @@
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 
-const newsGradients = [
-  'from-indigo-500 via-purple-500 to-pink-500',
-  'from-blue-500 via-cyan-500 to-teal-500',
-  'from-orange-500 via-pink-500 to-rose-500',
+const posts = [
+  {
+    title: 'NVIDIA NOKIA COLLABORATION',
+    summary: 'Nvidia will make a $1 billion equity investment in Nokia at a subscription price of $6.01 per share, the two companies announced.',
+    gradient: 'from-indigo-500 via-purple-500 to-pink-500',
+    image: '../../public/nvidia.jpg',
+    badge: 'Latest',
+  },
+  {
+    title: 'GEMINI 2.5',
+    summary: 'Introducing the Gemini 2.5 Computer Use model',
+    gradient: 'from-blue-500 via-cyan-500 to-teal-500',
+    image: '../../public/Gemini.webp',
+    badge: 'Latest',
+  },
+  {
+    title: 'The Quantum Breakthrough',
+    summary: 'The 2-decade quest for a quantum breakthrough that could change computing ',
+    gradient: 'from-orange-500 via-pink-500 to-rose-500',
+    image: '../../public/quantum960.jpg',
+    badge: 'Latest',
+  },
 ]
 
-const posts = new Array(3).fill(0).map((_, i) => ({
-  title: `Latest Update ${i + 1}`,
-  summary: 'Short description about the news or media update goes here.',
-  gradient: newsGradients[i],
-}))
+function NewsCard({ post, index }) {
+  const [imageError, setImageError] = useState(false)
+  
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.45, delay: 0.05 * index }}
+      whileHover={{ y: -10, scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      className="group glass neon-border rounded-3xl overflow-hidden transition-all cursor-pointer hover:shadow-2xl hover:shadow-pink-500/20 bg-[#1a1a2e]/80"
+    >
+      <div className="h-40 w-full shadow-xl relative overflow-hidden">
+        {!imageError ? (
+          <img
+            src={post.image}
+            alt={post.title}
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            onError={() => setImageError(true)}
+          />
+        ) : (
+          <div className={`h-full w-full bg-gradient-to-br ${post.gradient} relative`}>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+          </div>
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+        {post.badge && (
+          <div className="absolute top-4 left-4 px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-semibold text-white border border-white/30">
+            {post.badge}
+          </div>
+        )}
+      </div>
+      <div className="p-6">
+        <h3 className="text-xl font-bold text-white group-hover:gradient-text transition-all mb-2">
+          {post.title}
+        </h3>
+        <p className="text-sm leading-relaxed text-slate-300">{post.summary}</p>
+      </div>
+    </motion.article>
+  )
+}
 
 export default function News() {
   return (
@@ -46,29 +102,7 @@ export default function News() {
         
         <div className="mt-12 grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {posts.map((p, idx) => (
-            <motion.article
-              key={p.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.45, delay: 0.05 * idx }}
-              whileHover={{ y: -10, scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            className="group glass neon-border rounded-3xl overflow-hidden transition-all cursor-pointer hover:shadow-2xl hover:shadow-pink-500/20 bg-[#1a1a2e]/80"
-          >
-            <div className={`h-40 w-full bg-gradient-to-br ${p.gradient} shadow-xl relative overflow-hidden`}>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-              <div className="absolute top-4 left-4 px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-semibold text-white border border-white/30">
-                Latest
-              </div>
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-bold text-white group-hover:gradient-text transition-all mb-2">
-                {p.title}
-              </h3>
-              <p className="text-sm leading-relaxed text-slate-300">{p.summary}</p>
-            </div>
-            </motion.article>
+            <NewsCard key={p.title} post={p} index={idx} />
           ))}
         </div>
       </div>

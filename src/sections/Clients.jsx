@@ -2,7 +2,20 @@ import { motion } from 'framer-motion'
 
 const clients = ['Gov Agency', 'Telecom Co', 'FinTech', 'Industry Corp', 'Media Org', 'University']
 
-const clientColors = ['indigo', 'purple', 'pink', 'blue', 'cyan', 'emerald']
+const testimonials = [
+  {
+    text: 'XenOver delivered beyond expectations with robust execution.',
+    client: 'Shafiul Haque - ExonHost Ltd.',
+  },
+  {
+    text: 'Outstanding service and innovative solutions that transformed our operations.',
+    client: 'Mizanur Rahman - Shovon Group',
+  },
+  {
+    text: 'Professional team that understands our needs and delivers excellence consistently.',
+    client: 'Shahed Sobahan - Dhaka Inc.',
+  },
+]
 
 export default function Clients() {
   return (
@@ -71,19 +84,19 @@ export default function Clients() {
         >
           <h3 className="text-2xl font-bold text-white mb-8 text-center">What Our Clients Say</h3>
           <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {[1, 2, 3].map((i) => (
+            {testimonials.map((testimonial, idx) => (
               <motion.div 
-                key={i} 
+                key={idx} 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.1 * i }}
+                transition={{ duration: 0.4, delay: 0.1 * idx }}
                 whileHover={{ y: -6, scale: 1.02 }}
                 className="glass neon-border rounded-3xl p-6 text-sm text-slate-300 transition-all hover:shadow-xl hover:shadow-indigo-500/20 relative bg-[#1a1a2e]/80"
               >
                 <div className="absolute top-4 left-4 text-4xl text-indigo-400/30 font-serif">"</div>
-                <div className="mb-4 text-base font-semibold leading-relaxed text-white pl-6">XenOver delivered beyond expectations with robust execution.</div>
-                <div className="text-xs font-medium text-indigo-300 pt-4 border-t border-indigo-500/20">— Client {i}</div>
+                <div className="mb-4 text-base font-semibold leading-relaxed text-white pl-6">{testimonial.text}</div>
+                <div className="text-xs font-medium text-indigo-300 pt-4 border-t border-indigo-500/20">— {testimonial.client}</div>
               </motion.div>
             ))}
           </div>
