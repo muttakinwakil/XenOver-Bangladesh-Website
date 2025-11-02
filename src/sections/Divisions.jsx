@@ -23,7 +23,7 @@ const divisions = [
     title: 'Customized Software Development', 
     icon: FiCode, 
     gradient: 'from-emerald-500 to-teal-500', 
-    image: '/untitled design.png',
+    image: '/Untitled design.png',
     description: 'High-performance, secure, and scalable solutions tailored to your needs.'
   },
   { 
