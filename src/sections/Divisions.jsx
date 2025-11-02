@@ -23,35 +23,35 @@ const divisions = [
     title: 'Customized Software Development', 
     icon: FiCode, 
     gradient: 'from-emerald-500 to-teal-500', 
-    image: '../../public/untitled design.png',
+    image: '/untitled design.png',
     description: 'High-performance, secure, and scalable solutions tailored to your needs.'
   },
   { 
     title: 'Hardware & IoT Solutions', 
     icon: FiCpu, 
     gradient: 'from-pink-400 to-pink-400', 
-    image: '../../public/service-8.jpg',
+    image: '/service-8.jpg',
     description: 'Innovative hardware and IoT solutions that connect devices and enable smart ecosystems.'
   },
   { 
     title: 'Data Center & Hosting', 
     icon: FiServer, 
     gradient: 'from-sky-300 to-sky-300', 
-    image: '../../public/top-software-companies.jpg',
+    image: '/top-software-companies.jpg',
     description: 'Reliable data center infrastructure and cloud hosting services for optimal performance.'
   },
   { 
     title: 'Government Technology Projects', 
     icon: FiGitBranch, 
     gradient: 'from-sky-300 to-sky-300', 
-    image: '../../public/govt.webp',
+    image: '/govt.webp',
     description: 'Secure and compliant technology solutions designed for government and public sector needs.'
   },
   { 
     title: 'Industrial Software', 
     icon: FiDatabase, 
     gradient: 'from-orange-400 to-orange-400', 
-    image: '../../public/AI-in-Manufacturing.webp',
+    image: '/AI-in-Manufacturing.webp',
     description: 'Enterprise-grade software solutions that streamline industrial operations and processes.'
   },
   { 
